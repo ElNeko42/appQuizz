@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" type="text/css" herf="http.//fonts.googleapis.com/css
+    family=Montserrat>
+        rel=" stylesheet">
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <div class="panel">
+
+
+        <div class="flex-container">
+            <div class="imagen" > <img src="imagenes/logo.png"></div>
+            <div class="item" style="height: auto;">
+                <h1 id="pregunta" style="font-weight: 600; ">¿Cuál es tu tipo de cabello?</h1>
+            </div>
+            <!-- imagen oculta se muestra al terminar la encuesta-->
+            <div id="imagenResultado" hidden></div>
+            <div id="nombre" hidden></div>
+            <div id="imagenResultado2" hidden></div>
+            <div id="nombre2" hidden></div>
+            <div id="imagenResultado3" hidden></div>
+            <div id="nombre3" hidden></div>
+            <div id="pidelo" hidden>
+                <h2>¡Pídeselo a tu profesional!</h2>
+            </div>
+            <!-- botones-->
+            <div class="btnPregunta" id="btnPregunta"><button class="option" id="op1" onclick="repuesta(0)"><img
+                        src="imagenes/icono.png" style="width:25% ;">Normal</button></div>
+            <div class="btnPregunta2" id="btnPregunta2"><button class="option" id="op2" onclick="repuesta(1)"><img
+                        src="imagenes/icono.png" style="width:25% ;">Deshidratado</button></div>
+            <div class="btnPregunta3" id="btnPregunta3"> <button class="option" id="op3" onclick="repuesta(2)"><img
+                        src="imagenes/icono.png" style="width:25% ;">Blanco</button></div>
+            <div class="btnPregunta11" id="btnPregunta11"><button class="option" id="op11" onclick="repuestaCuero(11)"
+                    hidden><img src="imagenes/icono.png" style="width:25% ;">Normal</button></div>
+            <div class="btnPregunta21" id="btnPregunta21"><button class="option" id="op21" onclick="repuestaCuero(21)"
+                    hidden><img src="imagenes/icono.png" style="width:25% ;">Deshidratado</button></div>
+            <div class="btnPregunta31" id="btnPregunta31"> <button class="option" id="op31" onclick="repuestaCuero(31)"
+                    hidden><img src="imagenes/icono.png" style="width:25% ;">Blanco</button></div>
+            <div class="btnPregunta4" id="btnPregunta4"> <button class="option" id="op4" onclick="repuesta(3)"
+                    hidden><img src="imagenes/icono.png" style="width:25% ;">option 4</button>
+            </div>
+            <!-- boton encuesta cuero cabelludo-->
+            <div class="cuero" id="cuero"
+                style="background-color:white; border: 5px solid;border-color: black;border-radius: 45px;">
+                <button style="color: black;font-weight:600; font-size:large; text-align: center;"
+                    onclick="cueroCabelludo()">Producto ideal para
+                    mi cuero cabelludo</button>
+            </div>
+            <!-- boton oculto atras-->
+            <div class="atras" id="atras" onclick="atras()" hidden>
+                <button>atras</button>
+            </div>
+            <div class="atras" id="atras2" onclick="atras2()" hidden>
+                <button>atras</button>
+            </div>
+        </div>
+
+
+    </div>
+    <script src="script.js">
+    </script>
+</body>
+
+</html>
