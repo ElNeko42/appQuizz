@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body,
+html {
+    font-family: 'Montserrat', Courier, monospace;
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    height: 100%;
+    margin: 0;
+    background-color: #fefae0;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel {
+    margin-top: 10vh;
+    padding-bottom:5vh;
+    background: #EEE;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+
+    background-color: rgba(0, 0, 0, 0);
+
+
+
+}
+
+.flex-container {
+
+    height: auto;
+    min-width: 275px;
+    display: flex;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    /* flex-flow: column; */
+    flex-direction: column;
+    align-content: center;
+    
+    width: 50%;
+    background-color: #606c38;
+    color: #fefae0;
+    height: 100%;
+    padding: 15px;
+    gap: 5px;
+
+
+}
+
+.flex-container>div {
+    height: 100%;
+
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.flex-container2 {
+
+    height: 100%;
+    min-width: 275px;
+    display: flex;
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    /* flex-flow: column; */
+    flex-direction: column;
+    align-content: center;
+    max-width: 500px;
+    width: 50%;
+    background-color: #606c38;
+    color: #fefae0;
+    height: 100%;
+    padding: 15px;
+    gap: 5px;
+
+
+}
+
+.flex-container2>div {
+    height: 100%;
+
+    border-radius: 5px;
+    padding: 8px;
+}
+
+
+.btnPregunta2>button {
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid;
+    border-color: #fefae0;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: medium;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+.btnPregunta3>button {
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid;
+    border-color: #fefae0;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: medium;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+.btnPregunta4>button {
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid;
+    border-color: #fefae0;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: medium;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+.btnPregunta>button {
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid;
+    border-color: #fefae0;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: medium;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+.btnPregunta11>button {
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid;
+    border-color: #fefae0;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: medium;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+.btnPregunta21>button {
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid;
+    border-color: #fefae0;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: medium;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+.btnPregunta31>button {
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid;
+    border-color: #fefae0;
+    border-radius: 10px;
+    padding: 5px;
+    font-size: medium;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+
+button:focus {
+    outline: 0;
+}
+
+.mouse-over {
+    background-color: rgba(66, 66, 66, 0.34);
+}
+
+.mouse-down {
+    -webkit-box-shadow: 0px 6px 5px -4px rgba(0, 0, 0, 0.52);
+    -moz-box-shadow: 0px 6px 5px -4px rgba(0, 0, 0, 0.52);
+    box-shadow: 0px 6px 5px -4px rgba(0, 0, 0, 0.52);
+}
+
+.cuero {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.cuero>button {
+    background-color: rgba(0, 0, 0, 0);
+    border-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    font-size: large;
+}
+
+
+img {
+    width: 100%;
+    max-width: 250px;
+}
+
+
+.option {
+    width: 100%;
+    text-align: left;
+    position: relative;
+    border: none;
+    color: #FFFFFF;
+    padding: 20px;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.5s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.option:after {
+    content: "";
+    background: #283618;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.2s
+}
+
+.option:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+.option>img {
+    max-width: 50px;
+}
+
+.btnPregunta {
+    width: 100%;
+}
+.btnPregunta2 {
+    width: 100%;
+}
+.btnPregunta3 {
+    width: 100%;
+}
+.btnPregunta4 {
+    width: 100%;
+}
+.btnPregunta11 {
+    width: 100%;
+}
+.btnPregunta21 {
+    width: 100%;
+}
+.btnPregunta31 {
+    width: 100%;
+}
+
+#pregunta {
+    text-align: center;
+    font-size: 4vh;
+}
+
+.atras {
+    align-self: flex-start;
+    
+    
+}
+
+.atras>button {
+    background: #283618;
+    color: white;
+    border: none;
+    position: relative;
+    border: none;
+    font-size: medium;
+    color: #FFFFFF;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    border-radius: 20px;
+    text-align: center;
+}
+#imagenResultado>img{
+   
+    width: 100%;
+    max-width: 160px;
+    min-width: 100px;
+}
+#nombre{
+    text-align: center;
+    font-size: 4vh;
+    color: #fefae0
+}
+#imagenResultado2>img{
+   
+    width: 100%;
+    max-width: 160px;
+    min-width: 100px;
+}
+#nombre2{
+    text-align: center;
+    font-size: 4vh;
+    color: #fefae0
+}
+#imagenResultado3>img{
+   
+    width: 100%;
+    max-width: 160px;
+    min-width: 100px;
+}
+#nombre3{
+    text-align: center;
+    font-size: 4vh;
+    color: #fefae0
+}
+#pidelo>h2{
+    text-align: center;
+    font-size: 4vh;
+    font-weight: bold;
+    color: #283618;
+}
