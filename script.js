@@ -1,10 +1,11 @@
 var cabello = ["normal", "deshidratado", "blanco"];
-var grosor = ["grueso", "fino"];
-var tipo = ["rizo", "liso"];
-var uso = ["Lavar", "Acodicionar", "Rizar", "Alisar"]
+var grosor = ["Grueso", "Fino"];
+var tipo = ["Rizo", "Liso"];
+var uso = ["Lavar", "Acondicionar", "Rizar", "Alisar"]
 var resultado = [0, 0, 0, 0];
 var index = 0;
 var index2 = 0;
+var atras=0;
 comenzar();
 
 function comenzar() {
@@ -28,20 +29,25 @@ function repuesta(i) {
     switch (index) {
         case 0:
 
-            document.getElementById("pregunta").innerHTML = "Tu cabello " + cabello[resultado[0]] + " es..."
+            document.getElementById("pregunta").innerHTML = "Tu cabello " + cabello[resultado[0]].toLowerCase() + " es..."
             document.getElementById("op1").innerHTML = "<img src='imagenes/icono.png'style='width:25% ;'>" + grosor[0];
             document.getElementById("op2").innerHTML = "<img src='imagenes/icono.png'style='width:25% ;'>" + grosor[1];
             document.getElementById("op3").hidden = true;
+            document.getElementById("op22").hidden = false;
+            document.getElementById("btnPregunta3").hidden = false;
+            document.getElementById("btnPregunta22").hidden = false;
             document.getElementById("atras").hidden = false;
             document.getElementById("cuero").style.visibility = "hidden";
             break;
         case 1:
-            document.getElementById("pregunta").innerHTML = "Tu cabello " + cabello[resultado[0]] + " y " + grosor[resultado[1]] + " es..."
+            document.getElementById("pregunta").innerHTML = "Tu cabello " + cabello[resultado[0]].toLowerCase() + " y " + grosor[resultado[1]].toLowerCase() + " es..."
             document.getElementById("op1").innerHTML = "<img src='imagenes/icono.png'style='width:25% ;'>" + tipo[0];
             document.getElementById("op2").innerHTML = "<img src='imagenes/icono.png'style='width:25% ;'>" + tipo[1];
             document.getElementById("op3").hidden = true;
             document.getElementById("atras").hidden = false;
             document.getElementById("cuero").style.visibility = "hidden";
+            document.getElementById("op22").hidden = true;
+            document.getElementById("btnPregunta22").hidden = true;
             break;
         case 2:
             document.getElementById("btnPregunta11").hidden = true;
@@ -81,6 +87,15 @@ function repuestaCuero(i) {
     switch (i) {
 
         case 11:
+            if(atras==1){
+                document.getElementById("atras2").hidden = false;
+                document.getElementById("atras3").hidden = true;
+            }
+            if(atras==2){
+                document.getElementById("atras2").hidden = true;
+                document.getElementById("atras3").hidden = false;
+            }
+            
             document.getElementById("pregunta").innerHTML = "Tu producto Philip Martin's es..."
             document.getElementById("btnPregunta11").hidden = true;
             document.getElementById("btnPregunta21").hidden = true;
@@ -101,6 +116,14 @@ function repuestaCuero(i) {
             document.getElementById("nombre3").innerHTML = "¡Tratamiento con Sea salt spray !"
             break;
         case 21:
+            if(atras==1){
+                document.getElementById("atras2").hidden = false;
+                document.getElementById("atras3").hidden = true;
+            }
+            if(atras==2){
+                document.getElementById("atras2").hidden = true;
+                document.getElementById("atras3").hidden = false;
+            }
             document.getElementById("pregunta").innerHTML = "Tu producto Philip Martin's es..."
             document.getElementById("btnPregunta11").hidden = true;
             document.getElementById("btnPregunta21").hidden = true;
@@ -112,13 +135,21 @@ function repuestaCuero(i) {
             document.getElementById("imagenResultado").innerHTML = "<img src='imagenes/DARK WASH.png'>"
             document.getElementById("nombre").innerHTML = "¡lavamos con Dark wash!"
             document.getElementById("nombre2").hidden = false;
-            document.getElementById("nombre3").hidden = false;
+            document.getElementById("nombre3").hidden = true;
             document.getElementById("imagenResultado2").hidden = false;
             document.getElementById("imagenResultado2").innerHTML = "<img src='imagenes/SCALP BENEFIT.png'>"
             document.getElementById("nombre2").innerHTML = "¡Hidratamos con Scalp Benefit!"
 
             break;
         case 31:
+            if(atras==1){
+                document.getElementById("atras2").hidden = false;
+                document.getElementById("atras3").hidden = true;
+            }
+            if(atras==2){
+                document.getElementById("atras2").hidden = true;
+                document.getElementById("atras3").hidden = false;
+            }
             document.getElementById("pregunta").innerHTML = "Tu producto Philip Martin's es..."
             document.getElementById("btnPregunta11").hidden = true;
             document.getElementById("btnPregunta21").hidden = true;
@@ -132,7 +163,7 @@ function repuestaCuero(i) {
             document.getElementById("nombre2").hidden = false;
             document.getElementById("nombre3").hidden = false;
             document.getElementById("imagenResultado2").hidden = false;
-            document.getElementById("imagenResultado2").innerHTML = "<img src='imagenes/SCALP NUTRIMENT.png'>"
+            document.getElementById("imagenResultado2").innerHTML = "<img src='imagenes/SCALP BENEFIT.png'>"
             document.getElementById("nombre2").innerHTML = "¡Hidratamos con Scalp Benefit!"
             document.getElementById("imagenResultado3").hidden = false;
             document.getElementById("imagenResultado3").innerHTML = "<img src='imagenes/SCALP NUTRIMENT.png'>"
@@ -152,6 +183,14 @@ function atras2() {
     //compruebo en que fase del cuestionario esta
     switch (index2) {
         case 0:
+            if(atras==1){
+                document.getElementById("atras2").hidden = false;
+                document.getElementById("atras3").hidden = true;
+            }
+            if(atras==2){
+                document.getElementById("atras2").hidden = true;
+                document.getElementById("atras3").hidden = false;
+            }
             document.getElementById("btnPregunta").hidden = false;
             document.getElementById("btnPregunta2").hidden = false;
             document.getElementById("btnPregunta3").hidden = false;
@@ -168,6 +207,14 @@ function atras2() {
             document.getElementById("cuero").style.visibility = "visible";
             break;
         case 1:
+            if(atras==1){
+                document.getElementById("atras2").hidden = false;
+                document.getElementById("atras3").hidden = true;
+            }
+            if(atras==2){
+                document.getElementById("atras2").hidden = true;
+                document.getElementById("atras3").hidden = false;
+            }
             document.getElementById("nombre").hidden = true;
             document.getElementById("imagenResultado").hidden = true;
             document.getElementById("nombre2").hidden = true;
@@ -195,6 +242,14 @@ function atras2() {
             document.getElementById("cuero").style.visibility = "hidden";
             break;
         case 2:
+            if(atras==1){
+                document.getElementById("atras2").hidden = false;
+                document.getElementById("atras3").hidden = true;
+            }
+            if(atras==2){
+                document.getElementById("atras2").hidden = true;
+                document.getElementById("atras3").hidden = false;
+            }
             document.getElementById("pregunta").innerHTML = "Tu cabello " + cabello[resultado[0]] + " y " + grosor[resultado[1]] + " es..."
             document.getElementById("op1").innerHTML = "<img src='imagenes/icono.png'style='width:25% ;'>" + tipo[0];
             document.getElementById("op2").innerHTML = "<img src='imagenes/icono.png'style='width:25% ;'>" + tipo[1];
@@ -204,6 +259,14 @@ function atras2() {
             document.getElementById("cuero").style.visibility = "hidden";
             break;
         case 3:
+            if(atras==1){
+                document.getElementById("atras2").hidden = false;
+                document.getElementById("atras3").hidden = true;
+            }
+            if(atras==2){
+                document.getElementById("atras2").hidden = true;
+                document.getElementById("atras3").hidden = false;
+            }
             document.getElementById("pregunta").innerHTML = "¿Para qué quieres tu producto?"
             document.getElementById("btnPregunta").hidden = false;
             document.getElementById("btnPregunta2").hidden = false;
@@ -232,7 +295,69 @@ function atras2() {
     }//switch
 
 }//atras()
-function atras() {
+function atras3() {
+    index2--;
+    console.log(resultado);
+    console.log(index2 +"atras3");
+
+    //compruebo en que fase del cuestionario esta
+    switch (index2) {
+        case 0:
+            document.getElementById("btnPregunta").hidden = false;
+            document.getElementById("btnPregunta2").hidden = false;
+            document.getElementById("btnPregunta3").hidden = false;
+            document.getElementById("btnPregunta4").hidden = true;
+            document.getElementById("btnPregunta11").hidden = true;
+            document.getElementById("btnPregunta21").hidden = true;
+            document.getElementById("btnPregunta22").hidden = false;
+            document.getElementById("btnPregunta31").hidden = true;
+            document.getElementById("pregunta").innerHTML = "Tu cabello " + cabello[resultado[0]] + " es..."
+            document.getElementById("op1").innerHTML = "<img src='imagenes/icono.png'style='width:25% ;'>" + grosor[0];
+            document.getElementById("op2").innerHTML = "<img src='imagenes/icono.png'style='width:25% ;'>" + grosor[1];
+            document.getElementById("op3").hidden = true;
+            document.getElementById("op22").hidden = false;
+            document.getElementById("atras").hidden = false;
+            document.getElementById("atras2").hidden = true;
+            document.getElementById("atras3").hidden = true;
+            document.getElementById("cuero").style.visibility = "hidden";
+
+            break;
+        case 1:
+            document.getElementById("nombre").hidden = true;
+            document.getElementById("imagenResultado").hidden = true;
+            document.getElementById("nombre2").hidden = true;
+            document.getElementById("imagenResultado2").hidden = true;
+            document.getElementById("nombre3").hidden = true;
+            document.getElementById("imagenResultado3").hidden = true;
+            document.getElementById("pidelo").hidden = true;
+            document.getElementById("btnPregunta4").hidden = true;
+            document.getElementById("pregunta").innerHTML = "Tu cuero cabelludo es..."
+            document.getElementById("btnPregunta").hidden = true;
+            document.getElementById("btnPregunta2").hidden = true;
+            document.getElementById("btnPregunta3").hidden = true;
+            document.getElementById("btnPregunta11").hidden = false;
+            document.getElementById("btnPregunta21").hidden = false;
+            document.getElementById("btnPregunta31").hidden = false;
+            document.getElementById("op11").hidden = false;
+            document.getElementById("atras2").hidden = true;
+            document.getElementById("atras").hidden = true;
+            document.getElementById("op21").hidden = false;
+            document.getElementById("op31").hidden = false;
+
+
+            document.getElementById("op11").innerHTML = "<img src='imagenes/icono.png'style='width:25% ;'>" + "Graso";
+            document.getElementById("op21").innerHTML = "<img src='imagenes/icono.png'style='width:25% ;'>" + "Descamacion";
+            document.getElementById("op31").innerHTML = "<img src='imagenes/icono.png'style='width:25% ;'>" + "Con caída";
+            document.getElementById("atras2").hidden = true;
+            document.getElementById("atras1").hidden = true;
+            document.getElementById("cuero").style.visibility = "hidden";
+            break;
+       
+
+    }//switch
+
+}//atras()
+function atras1() {
     index--;
     console.log(resultado);
     console.log(index);
@@ -245,6 +370,9 @@ function atras() {
             document.getElementById("op3").hidden = false;
             document.getElementById("op3").innerHTML = "<img src='imagenes/icono.png'style='width:25% ;'>" + "Blanco";
             document.getElementById("atras").hidden = true;
+            document.getElementById("op22").hidden = true;
+            document.getElementById("btnPregunta22").hidden = true;
+            document.getElementById("btnPregunta3").hidden = false;
             document.getElementById("cuero").style.visibility = "visible";
             break;
         case 1:
@@ -252,6 +380,9 @@ function atras() {
             document.getElementById("op1").innerHTML = "<img src='imagenes/icono.png'style='width:25% ;'>" + grosor[0];
             document.getElementById("op2").innerHTML = "<img src='imagenes/icono.png'style='width:25% ;'>" + grosor[1];
             document.getElementById("op3").hidden = true;
+            document.getElementById("op22").hidden = false;
+            document.getElementById("btnPregunta22").hidden = false;
+            document.getElementById("btnPregunta3").hidden = true;
             document.getElementById("atras").hidden = false;
             document.getElementById("cuero").style.visibility = "hidden";
             break;
@@ -291,33 +422,11 @@ function atras() {
 
 
     }//switch
-    /* switch (index2) {
-         case 0:
-             
-             document.getElementById("btnPregunta11").hidden = true;
-             document.getElementById("btnPregunta21").hidden = true;
-             document.getElementById("btnPregunta31").hidden = true;
-             document.getElementById("op11").hidden = true;
-             document.getElementById("op21").hidden = true;
-             document.getElementById("op31").hidden = true;
-             document.getElementById("btnPregunta").hidden = false;
-             document.getElementById("btnPregunta2").hidden = false;
-             document.getElementById("btnPregunta3").hidden = false;
-             document.getElementById("op1").hidden = false;
-             document.getElementById("op2").hidden = false;
-             document.getElementById("op3").hidden = false;
-             document.getElementById("pregunta").innerHTML = "¿Cuál es tu tipo de cabello?"
-             document.getElementById("op1").innerHTML = "<img src='imagenes/icono.png'style='width:25% ;'>" + "Normal";
-             document.getElementById("op2").innerHTML = "<img src='imagenes/icono.png'style='width:25% ;'>" + "Deshidratado";
-             document.getElementById("op3").hidden = false;
-             document.getElementById("op3").innerHTML = "<img src='imagenes/icono.png'style='width:25% ;'>" + "Blanco";
-             document.getElementById("atras").hidden = true;
-             document.getElementById("cuero").style.visibility = "visible";
-             break;
-         }*/
+  
 }//atras()
 
 function cueroCabelludo() {
+    atras=1;
     console.log("estoy en cuero")
     index2++;
     document.getElementById("btnPregunta4").hidden = true;
@@ -337,6 +446,32 @@ function cueroCabelludo() {
     document.getElementById("op21").innerHTML = "<img src='imagenes/icono.png'style='width:25% ;'>" + "Descamacion";
     document.getElementById("op31").innerHTML = "<img src='imagenes/icono.png'style='width:25% ;'>" + "Con caída";
     document.getElementById("atras2").hidden = false;
+    document.getElementById("cuero").style.visibility = "hidden";
+}
+function cueroCabelludo2() {
+    atras=2;
+    console.log("estoy en cuero")
+    index2++;
+    document.getElementById("btnPregunta4").hidden = true;
+    document.getElementById("pregunta").innerHTML = "Tu cuero cabelludo es..."
+    document.getElementById("btnPregunta").hidden = true;
+    document.getElementById("btnPregunta2").hidden = true;
+    document.getElementById("btnPregunta3").hidden = true;
+    document.getElementById("btnPregunta11").hidden = false;
+    document.getElementById("btnPregunta21").hidden = false;
+    document.getElementById("btnPregunta22").hidden = true;
+    document.getElementById("btnPregunta31").hidden = false;
+    document.getElementById("op11").hidden = false;
+    document.getElementById("op21").hidden = false;
+    document.getElementById("op22").hidden = true;
+    document.getElementById("op31").hidden = false;
+
+
+    document.getElementById("op11").innerHTML = "<img src='imagenes/icono.png'style='width:25% ;'>" + "Graso";
+    document.getElementById("op21").innerHTML = "<img src='imagenes/icono.png'style='width:25% ;'>" + "Descamacion";
+    document.getElementById("op31").innerHTML = "<img src='imagenes/icono.png'style='width:25% ;'>" + "Con caída";
+    document.getElementById("atras").hidden = true;
+    document.getElementById("atras3").hidden = false;
     document.getElementById("cuero").style.visibility = "hidden";
 }
 //muestro producto
@@ -494,7 +629,7 @@ function mostrarProducto() {
 
     }
     else if (resultado[0] == 1 && resultado[1] == 1 && resultado[2] == 1 && resultado[3] == 1) {
-        document.getElementById("imagenResultado").innerHTML = "<img src='imagenes/EVERYDAY RINSE.png'>"
+        document.getElementById("imagenResultado").innerHTML = "<img src='imagenes/Everyday_rinse.png'>"
         document.getElementById("nombre").innerHTML = "Everyday Rinse!"
 
     }
